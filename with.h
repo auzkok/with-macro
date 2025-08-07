@@ -1,6 +1,6 @@
 #ifndef WITH_H_INCLUDED
 #define WITH_H_INCLUDED
 
-#define WITH(init, deinit) char with_cond_##__LINE__ = 1; for ((init); with_cond_##__LINE__; with_cond_##__LINE__ = 0, (deinit))
+#define WITH(init, deinit) for (int w_o_ = 1, w_i_ = 1; w_o_; w_o_ = 0) for (init; w_i_; w_i_ = 0, (deinit))
 
 #endif // WITH_H_INCLUDED
