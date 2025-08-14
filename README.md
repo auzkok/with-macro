@@ -4,6 +4,10 @@ Many people are trying to implement defer macro in C. To achieve this they basic
 
 Just include the file (or simply copy the oneliner) and invoke with `WITH(<initial statement>, <cleanup statement>)`.
 
+## Control Flow
+
+If you want to exit the `With` block early you should use `continue` in case you wish to execute the 'after' expression and `break` in case you wish to exit the block without executing it.
+
 ## Example
 
 ### Python where block
